@@ -15,7 +15,7 @@ jobs:
           python-version: 3.8 #install the python needed
       - name: Install dependencies
         run: |
-          pip install requests
+          pip install requests pyyaml
       - name: rund the bot
         run: |
           python ./__innit__.py
