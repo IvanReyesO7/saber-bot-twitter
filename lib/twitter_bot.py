@@ -1,4 +1,5 @@
 import requests
+import os
 
 class TwitterBot:
     def __init__(self, peopleIWantToAnnoy, message):
@@ -8,7 +9,7 @@ class TwitterBot:
 
     def send_message(self):
         headers = {
-            'Authorization': f'OAuth oauth_consumer_key="{ENV[OATH_CONSUMER]}",oauth_token="{ENV[OATH_TOKEN]}",oauth_signature_method="HMAC-SHA1",oauth_timestamp="{ENV[TIMESTAMP]}",oauth_nonce="{ENV[OATH_NONCE]}",oauth_version="1.0",oauth_signature="{ENV[OATH_CONSUMER]}"',
+            'Authorization': f'OAuth oauth_consumer_key="{os.environ[OATH_CONSUMER_KEY]}",oauth_token="{os.environ[OATH_TOKEN]}",oauth_signature_method="HMAC-SHA1",oauth_timestamp="{os.environ[TIMESTAMP]}",oauth_nonce="{os.environ[OATH_NONCE]}",oauth_version="1.0",oauth_signature="{os.environ[OATH_CONSUMER]}"',
             'Content-Type': 'application/json',
         }
         json_data = {
