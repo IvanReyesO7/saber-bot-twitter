@@ -24,6 +24,6 @@ jobs:
           OATH_TOKEN: ${{ secrets.OATH_TOKEN }}
           TIMESTAMP: ${{ secrets.TIMESTAMP }}
           OATH_NONCE: ${{ secrets.OATH_NONCE }}
-          OATH_CONSUMER: ${{ secrets.OATH_NONCE }}
+          OATH_SIGNATURE: ${{ secrets.OATH_SIGNATURE }}
 
         
