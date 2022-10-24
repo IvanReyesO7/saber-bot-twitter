@@ -8,7 +8,7 @@ def parsePeopleIWantToAnnoy():
         return yaml.full_load(f)['people_i_want_to_annoy']
 
 def timestampedMessage():
-    return f', I am sending this message from a GitHub repo with GitHub actions at {strftime("%Y-%m-%d %H:%M:%S", gmtime())} (even though you didn\'t ask)'
+    return f', I am sending this message from a GitHub repo with GitHub actions at {strftime("%Y-%m-%d %H:%M:%S", gmtime())} (@FedeLago31 asked)'
 
 users = parsePeopleIWantToAnnoy()
 message = timestampedMessage()
